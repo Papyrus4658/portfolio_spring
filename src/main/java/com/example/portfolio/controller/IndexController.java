@@ -1,4 +1,4 @@
-package com.example.portfolio;
+package com.example.portfolio.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,5 +9,4 @@ public class IndexController {
     public String getMethodName() {
         return "index";
     }
-
 }
