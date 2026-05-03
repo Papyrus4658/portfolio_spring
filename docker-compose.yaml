@@ -6,8 +6,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: portfolio
-      MYSQL_USER: mysqluser
-      MYSQL_PASSWORD: mysqlpass
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: apppass
       TZ: Asia/Tokyo
       MYSQL_ROOT_HOST: "%"
     ports:

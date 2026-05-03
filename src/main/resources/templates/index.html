@@ -9,7 +9,23 @@
 
 <body>
     <main>
-        <h1>試し書き</h1>
+        <article>
+            <h1 th:text="#{work.list}"></h1>
+
+            <th:block th:if="${works.size()}==0">
+                <p th:text="#{work.empty}"></p>
+            </th:block>
+            <th:block th:if="${works.size()}!=0">
+                <div th:each="work:${works}">
+                    <h2 th:text="${work.title}"></h2>
+                    <figure>
+                        <img th:src="${work.thumbnail}" alt="作品のサムネイル">
+                        <figcaption th:utext="${work.summary}"></figcaption>
+                    </figure>
+                    <p th:text="${work.repoUrl}"></p>
+                </div>
+            </th:block>
+        </article>
     </main>
 </body>
 

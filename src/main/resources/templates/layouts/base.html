@@ -4,16 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title th:replace="${title}">デフォルトタイトル</title>
-    <link rel="stylesheet" th:href="@{/css/ress.css}">
+
+    <link rel="stylesheet" th:href="@{/css/destyle.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header th:replace="~{layouts/header :: header}"></header>
-    <main th:replace="${content}">
-        <h1>デフォルトコンテンツ</h1>
+    <main>
+        <article th:replace="${content}">
+            <h1>デフォルトコンテンツ</h1>
+        </article>
+        <aside th:replace="~{layouts/aside :: aside}"></aside>
     </main>
-    <aside th:replace="~{layouts/aside :: aside}"></aside>
     <footer th:replace="~{layouts/footer :: footer}"></footer>
 </body>
 
