@@ -12,14 +12,14 @@ import com.example.portfolio.repository.WorkRepository;
 
 @Controller
 public class IndexController {
-    @Autowired
-    private WorkRepository workRepository;
+	@Autowired
+	private WorkRepository workRepository;
 
-    @GetMapping("/")
-    public String getIndex(Model model) {
-        List<Work> works = workRepository.findAll();
-        model.addAttribute("works", works);
+	@GetMapping("/")
+	public String getIndex(Model model) {
+		List<Work> works = workRepository.findAll();
+		model.addAttribute("works", works);
 
-        return "index";
-    }
+		return "index";
+	}
 }

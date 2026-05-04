@@ -26,24 +26,24 @@ import lombok.ToString;
 @Entity
 @Table(name = "works")
 public class Work {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private String title;
-    private String thumbnail;
-    private String summary;
-    private String repoUrl;
+	private String title;
+	private String thumbnail;
+	private String summary;
+	private String repoUrl;
 
-    @CreationTimestamp
-    private LocalDateTime createdAt;
+	@CreationTimestamp
+	private LocalDateTime createdAt;
 
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
+	@UpdateTimestamp
+	private LocalDateTime updatedAt;
 
-    private Integer deleted = 0;
+	private Integer deleted = 0;
 
-    @ManyToMany
-    @JoinTable(name = "work_tags", joinColumns = @JoinColumn(name = "work_id"), inverseJoinColumns = @JoinColumn(name = "tag_id"))
-    private List<Tag> tags;
+	@ManyToMany
+	@JoinTable(name = "work_tags", joinColumns = @JoinColumn(name = "work_id"), inverseJoinColumns = @JoinColumn(name = "tag_id"))
+	private List<Tag> tags;
 }

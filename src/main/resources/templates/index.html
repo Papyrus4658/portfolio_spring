@@ -11,7 +11,6 @@
     <main>
         <article>
             <h1 th:text="#{work.list}"></h1>
-
             <th:block th:if="${works.size()}==0">
                 <p th:text="#{work.empty}"></p>
             </th:block>
@@ -22,7 +21,7 @@
                         <img th:src="${work.thumbnail}" alt="作品のサムネイル">
                         <figcaption th:utext="${work.summary}"></figcaption>
                     </figure>
-                    <p th:text="${work.repoUrl}"></p>
+                    <a th:href="${work.repoUrl}" th:text="${work.repoUrl}" target="_blank"></a>
                 </div>
             </th:block>
         </article>

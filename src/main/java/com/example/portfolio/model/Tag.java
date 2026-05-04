@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "tags")
 public class Tag {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private String name; // "Java", "Python" など
+	private String name; // "Java", "Python" など
 }
